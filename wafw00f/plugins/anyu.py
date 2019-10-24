@@ -9,8 +9,7 @@ NAME = 'AnYu (AnYu Technologies)'
 
 def is_waf(self):
     schemes = [
-        self.matchContent(r'anyu.+?the.green.channel'),
-        self.matchContent(r'sorry.+?your.access.has.been.intercepted.by.anyu')
+        self.matchContent(r'anyu. the green channel|sorry! your access has been intercepted by anyu'),
         ]
     if any(i for i in schemes):
         return True

@@ -9,7 +9,7 @@ NAME = 'BulletProof Security Pro (AITpro Security)'
 
 def is_waf(self):
     schemes = [
-        self.matchContent(r'(?s)bpsMessage.+?403 Forbidden Error Page.+?If you arrived here due to a search')
+        self.matchContent(r'If you arrived here due to a search or clicking on a link click your Browser\'s back button to return to the previous page')
     ]
     if any(i for i in schemes):
         return True

@@ -13,7 +13,7 @@ def is_waf(self):
         self.matchCookie(r'^BNI__BARRACUDA_LB_COOKIE='),
         self.matchCookie(r'^BNI_persistence='),
         self.matchCookie(r'^BN[IE]S_.*?='),
-        self.matchContent(r'Barracuda.Networks.+?Inc')
+        # self.matchContent(r'Barracuda Networks, Inc') - seems very likely to cause false positives
     ]
     if any(i for i in schemes):
         return True
